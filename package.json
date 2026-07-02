@@ -1,0 +1,57 @@
+{
+  "name": "cn-cloud-billing",
+  "version": "1.0.0",
+  "description": "One typed API for Alibaba Cloud, Tencent Cloud and Volcano Engine monthly bills — normalized summary + per-resource detail. Bring your own keys.",
+  "keywords": [
+    "billing",
+    "cost",
+    "finops",
+    "alibaba-cloud",
+    "aliyun",
+    "tencent-cloud",
+    "volcengine",
+    "volcano-engine",
+    "cloud-cost",
+    "china",
+    "typescript"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "oratis (https://github.com/oratis)",
+  "license": "MIT",
+  "homepage": "https://github.com/oratis/cn-cloud-billing#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oratis/cn-cloud-billing.git"
+  },
+  "bugs": { "url": "https://github.com/oratis/cn-cloud-billing/issues" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@alicloud/bssopenapi20171214": "^4.1.1",
+    "@alicloud/openapi-client": "^0.4.15",
+    "@volcengine/openapi": "^1.36.2",
+    "tencentcloud-sdk-nodejs-billing": "^4.1.258"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}
